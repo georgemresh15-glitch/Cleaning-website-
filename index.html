@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crestamila Cleaning Service | Maastricht & Limburg</title>
+  <meta name="description" content="Schoonmaak voor woningen, kantoren en VvE’s in Maastricht en Limburg. Duidelijke afspraken, nette oplevering en offerte op maat." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --bg2:#f6f8fb;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:#e2e8f0;
+      --brand:#0ea5e9;
+      --brand2:#22c55e;
+      --shadow: 0 10px 25px rgba(15,23,42,.08);
+      --radius:16px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    img{max-width:100%; display:block}
+    .container{max-width:var(--max); margin:0 auto; padding:0 16px}
+    .section{padding:54px 0}
+    .section--alt{background:var(--bg2)}
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:6px 10px; border:1px solid var(--line);
+      background:#fff; border-radius:999px; color:var(--muted);
+      font-size:13px;
+    }
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:40;
+      background:rgba(255,255,255,.92);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      height:64px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; text-decoration:none;
+      min-width:220px;
+    }
+    .brand img{width:36px; height:36px; border-radius:10px; border:1px solid var(--line); background:#fff; object-fit:contain}
+    .brand .btxt{display:flex; flex-direction:column; line-height:1.1}
+    .brand .bname{font-weight:700; font-size:14px}
+    .brand .bsub{font-size:12px; color:var(--muted)}
+    nav ul{
+      list-style:none; padding:0; margin:0;
+      display:flex; gap:16px; align-items:center;
+    }
+    nav a{
+      text-decoration:none; color:var(--muted);
+      font-weight:600; font-size:14px;
+      padding:8px 10px; border-radius:10px;
+    }
+    nav a:hover{background:var(--bg2); color:var(--text)}
+    .actions{display:flex; align-items:center; gap:10px}
+    .lang{
+      display:flex; gap:6px; padding:4px; background:var(--bg2); border:1px solid var(--line); border-radius:999px;
+    }
+    .lang button{
+      border:0; background:transparent; padding:6px 10px; border-radius:999px;
+      font-weight:700; color:var(--muted); cursor:pointer; font-size:12px;
+    }
+    .lang button.is-active{background:#fff; border:1px solid var(--line); color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:10px 14px; border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font-weight:800;
+      cursor:pointer;
+      text-decoration:none;
+      box-shadow: 0 6px 14px rgba(15,23,42,.06);
+    }
+    .btn.primary{background:var(--brand); border-color:transparent; color:#fff}
+    .btn.ghost{background:#fff}
+    .btn.small{padding:8px 12px; font-size:13px}
+    /* Mobile nav */
+    .menuBtn{display:none}
+    @media (max-width: 860px){
+      nav{display:none}
+      .menuBtn{display:inline-flex}
+    }
+    .mobileNav{
+      display:none;
+      border-top:1px solid var(--line);
+      background:#fff;
+    }
+    .mobileNav a{
+      display:block; padding:14px 16px; text-decoration:none; color:var(--muted); font-weight:700;
+      border-bottom:1px solid var(--line);
+    }
+
+    /* Hero */
+    .hero{
+      padding:44px 0 28px;
+      background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+    }
+    .heroGrid{
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; align-items:stretch;
+    }
+    .hero h1{margin:10px 0 10px; font-size:38px; line-height:1.1}
+    .hero p{margin:0 0 16px; color:var(--muted); font-size:16px}
+    .heroCtas{display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 10px}
+    .checks{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
+    .check{
+      display:inline-flex; gap:8px; align-items:center; padding:8px 10px;
+      background:#fff; border:1px solid var(--line); border-radius:12px; color:var(--muted); font-weight:700; font-size:13px;
+    }
+    .heroCard{
+      background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+      box-shadow:var(--shadow); padding:16px;
+    }
+    .heroCard h3{margin:0 0 10px; font-size:16px}
+    .kv{display:grid; grid-template-columns: 86px 1fr; gap:8px 12px; color:var(--muted); font-weight:700; font-size:13px}
+    .kv b{color:var(--text)}
+    @media (max-width: 860px){
+      .heroGrid{grid-template-columns:1fr}
+      .hero h1{font-size:32px}
+    }
+/* Value cards */
+    .vals{display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-top:16px}
+    .val{
+      background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+      padding:14px; box-shadow: 0 6px 14px rgba(15,23,42,.04);
+    }
+    .val h4{margin:0 0 6px; font-size:14px}
+    .val p{margin:0; color:var(--muted); font-weight:650; font-size:13px}
+    @media (max-width: 860px){ .vals{grid-template-columns:1fr} }
+
+    /* Services cards */
+    .sectionHead h2{margin:0 0 6px; font-size:28px}
+    .sectionHead p{margin:0; color:var(--muted); font-weight:650}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:16px}
+    .card{
+      background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+      overflow:hidden; box-shadow:var(--shadow);
+      display:flex; flex-direction:column;
+    }
+    .cardImgWrap{position:relative}
+    .card__img{
+      width:100%;
+      height:210px; /* الصور أكبر */
+      object-fit:cover;
+      background:var(--bg2);
+    }
+    .priceTag{
+      position:absolute; right:12px; top:12px;
+      background: rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      padding:6px 10px; border-radius:999px;
+      font-weight:900; color:var(--text); font-size:13px;
+    }
+    .cardBody{padding:14px; display:flex; flex-direction:column; gap:10px}
+    .cardBody h3{margin:0; font-size:16px}
+    .cardBody p{margin:0; color:var(--muted); font-weight:650}
+    .cardFooter{margin-top:auto; padding:0 14px 14px}
+    .cardLink{
+      color:var(--brand);
+      font-weight:900; text-decoration:none;
+      display:inline-flex; gap:8px; align-items:center;
+    }
+    .cardLink:hover{text-decoration:underline}
+    @media (max-width: 980px){ .grid3{grid-template-columns:1fr 1fr} }
+    @media (max-width: 640px){ .grid3{grid-template-columns:1fr} }
+    /* Hint bar */
+    .hintBar{
+      margin-top:14px;
+      display:flex; gap:12px; align-items:center; flex-wrap:wrap;
+      background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+      padding:12px; box-shadow: 0 6px 14px rgba(15,23,42,.04);
+    }
+
+    /* About */
+    .aboutGrid{display:grid; grid-template-columns: 1.2fr .8fr; gap:16px; align-items:start}
+    .aboutBox{
+      background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+      padding:16px; box-shadow:var(--shadow);
+    }
+    .stats{display:grid; grid-template-columns: repeat(3,1fr); gap:10px; margin-top:12px}
+    .stat{
+      background:var(--bg2); border:1px solid var(--line); border-radius:14px;
+      padding:12px;
+    }
+    .stat .n{font-weight:950}
+    .stat .t{color:var(--muted); font-weight:700; font-size:13px}
+    .aboutMedia{
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:#fff;
+    }
+    .aboutMedia img{width:100%; height:330px; object-fit:cover; background:var(--bg2)}
+    .aboutNote{
+      padding:12px 14px; color:var(--muted); font-weight:800; border-top:1px solid var(--line);
+    }
+    @media (max-width: 860px){
+      .aboutGrid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+    }
+
+    /* Gallery */
+    .gallery{display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-top:16px}
+    .gItem{
+      border:1px solid var(--line); border-radius:var(--radius);
+      overflow:hidden; background:#fff; box-shadow: 0 8px 18px rgba(15,23,42,.06);
+    }
+    .gItem img{width:100%; height:220px; object-fit:cover; background:var(--bg2)}
+    .gNote{
+      margin-top:12px;
+      background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+      padding:12px; color:var(--muted); font-weight:700;
+    }
+    @media (max-width: 980px){ .gallery{grid-template-columns:1fr 1fr} }
+    @media (max-width: 640px){ .gallery{grid-template-columns:1fr} }
+    /* Contact */
+    .contactGrid{display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-top:16px}
+    .contactBox{
+      background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+      padding:16px; box-shadow:var(--shadow);
+    }
+    .contactBox h3{margin:0 0 10px}
+    .contactRow{display:flex; gap:10px; flex-wrap:wrap}
+    .form label{display:block; font-weight:900; margin:10px 0 6px}
+    .input, select, textarea{
+      width:100%;
+      padding:11px 12px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#fff;
+      color:var(--text);
+      font-weight:650;
+      outline:none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .fine{margin-top:10px; color:var(--muted); font-weight:650; font-size:12px}
+    @media (max-width: 860px){ .contactGrid{grid-template-columns:1fr} }
+
+    /* Footer */
+    footer{
+      border-top:1px solid var(--line);
+      padding:18px 0;
+      color:var(--muted);
+      background:#fff;
+    }
+    .footerRow{display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap}
+
+    /* Modal */
+    .modal{
+      position:fixed; inset:0;
+      display:none;
+      align-items:center; justify-content:center;
+      padding:18px;
+      background:rgba(15,23,42,.45);
+      z-index:60;
+    }
+    .modal.is-open{display:flex}
+    .modalCard{
+      width:min(720px, 100%);
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow: 0 20px 50px rgba(15,23,42,.25);
+      overflow:hidden;
+    }
+    .modalHead{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 14px;
+      border-bottom:1px solid var(--line);
+      background:var(--bg2);
+    }
+    .modalHead h3{margin:0; font-size:16px}
+    .x{
+      border:1px solid var(--line);
+      background:#fff;
+      width:36px; height:36px; border-radius:12px;
+      cursor:pointer; font-weight:950;
+    }
+    .modalBody{padding:14px}
+    .modalBody p{margin:0 0 10px; color:var(--muted); font-weight:650}
+    .bul{margin:0; padding-left:18px; color:var(--muted); font-weight:700}
+    .bul li{margin:6px 0}
+    .modalActions{padding:14px; border-top:1px solid var(--line); display:flex; gap:10px; justify-content:flex-end; background:#fff}
+
+    /* helper */
+    .hide{display:none !important}
+  </style>
+</head>
+
+<body>
+<!-- HEADER -->
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img src="logo.png" alt="Crestamila logo" />
+      <span class="btxt">
+        <span class="bname">Crestamila</span>
+        <span class="bsub" data-i18n="brand_sub">Maastricht & Limburg</span>
+      </span>
+    </a>
+    
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#services" data-i18n="nav_services">Diensten</a></li>
+        <li><a href="#about" data-i18n="nav_about">Over ons</a></li>
+        <li><a href="#gallery" data-i18n="nav_gallery">Foto’s</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <div class="actions">
+      <button class="btn ghost menuBtn" type="button" id="menuBtn">☰</button>
+      
+      <div class="lang" aria-label="Language switcher">
+        <button class="langBtn is-active" type="button" data-lang="nl">NL</button>
+        <button class="langBtn" type="button" data-lang="en">EN</button>
+      </div>
+      
+      <!-- بدل tarieven -> Offerte -->
+      <button class="btn ghost" type="button" data-modal-open="#pricingModal" data-i18n="btn_quote">Offerte</button>
+    </div>
+  </div>
+  
+  <div class="mobileNav" id="mobileNav">
+    <a href="#services" data-i18n="nav_services">Diensten</a>
+    <a href="#about" data-i18n="nav_about">Over ons</a>
+    <a href="#gallery" data-i18n="nav_gallery">Foto’s</a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<main id="top">
+  <section class="hero">
+    <div class="container heroGrid">
+      <div>
+        <span class="pill" data-i18n="brand_tag">Maastricht • Limburg • Eco-vriendelijk</span>
+        <h1 data-i18n="hero_title">Professionele schoonmaak, met respect voor mens & natuur.</h1>
+        <p data-i18n="hero_subtitle">
+          Voor woning, kantoor en VvE’s. Duidelijke afspraken, flexibel gepland en netjes opgeleverd.
+        </p>
+        
+        <div class="heroCtas">
+          <a class="btn primary" href="#contact" data-i18n="hero_cta_quote">Vraag een offerte</a>
+          <a class="btn" id="waTop" href="https://wa.me/31624545080" target="_blank" rel="noopener" data-i18n="hero_cta_whatsapp">WhatsApp ons</a>
+        </div>
+        
+        <div class="checks">
+          <span class="check" data-i18n="hero_check_1">Betrouwbaar & discreet</span>
+          <span class="check" data-i18n="hero_check_2">Flexibele planning</span>
+          <span class="check" data-i18n="hero_check_3">Eco-producten</span>
+        </div>
+        
+        <div class="vals">
+          <div class="val">
+            <h4 data-i18n="val1_t">Milieubewust</h4>
+            <p data-i18n="val1_d">We gebruiken waar mogelijk eco-vriendelijke middelen.</p>
+          </div>
+          <div class="val">
+            <h4 data-i18n="val2_t">Op maat</h4>
+            <p data-i18n="val2_d">Wekelijks, tweewekelijks of eenmalig.</p>
+          </div>
+          <div class="val">
+            <h4 data-i18n="val3_t">Duidelijk</h4>
+            <p data-i18n="val3_d">Heldere afspraken en nette oplevering.</p>
+          </div>
+        </div>
+      </div>
+      
+      <aside class="heroCard" aria-label="Fast contact">
+        <h3 data-i18n="hero_fastcontact">Snel contact</h3>
+        <div class="kv">
+          <span data-i18n="hero_region_k">Regio:</span><b data-i18n="hero_region_v">Maastricht & Limburg</b>
+          <span data-i18n="hero_email_k">Email:</span>
+<b>
+  <a id="emailLink"
+     href="https://mail.google.com/mail/?view=cm&fs=1&to=crestamila.cleaning@gmail.com"
+     target="_blank" rel="noopener">
+    crestamila.cleaning@gmail.com
+  </a>
+</b>
+          <span>WhatsApp:</span><b><a href="https://wa.me/31624545080" target="_blank" rel="noopener">+31 6 2454 5080</a></b>
+          <span data-i18n="hero_resp_k">Reactie:</span><b data-i18n="hero_resp_v">Meestal dezelfde dag</b>
+        </div>
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn small primary" href="#contact" data-i18n="btn_quote">Offerte</a>
+          <a class="btn small" href="mailto:crestamila.cleaning@gmail.com" data-i18n="btn_email">Email</a>
+        </div>
+        <p class="fine" data-i18n="hero_note">
+          Prijzen zijn richtprijzen. Definitieve prijs altijd via offerte op basis van locatie, grootte en wensen.
+        </p>
+      </aside>
+    </div>
+  </section>
+  <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 data-i18n="services_title">Diensten</h2>
+          <p data-i18n="services_subtitle">Voor particulieren, bedrijven en VvE’s in Maastricht en Limburg.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="cardImgWrap">
+              <img src="house.jpg" alt="Woning schoonmaak" class="card__img" />
+              <div class="priceTag" data-i18n="price_home">Vanaf €25/uur</div>
+            </div>
+            <div class="cardBody">
+              <h3 data-i18n="svc_home_title">Woning schoonmaak</h3>
+              <p data-i18n="svc_home_text">Fris en netjes, met vaste afspraken. Ideaal voor wekelijks, tweewekelijks of eenmalig.</p>
+            </div>
+            <div class="cardFooter">
+              <a class="cardLink" href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cardImgWrap">
+              <img src="office.jpg" alt="Kantoor schoonmaak" class="card__img" />
+              <div class="priceTag" data-i18n="price_office">Vanaf €30/uur</div>
+            </div>
+            <div class="cardBody">
+              <h3 data-i18n="svc_office_title">Kantoor schoonmaak</h3>
+              <p data-i18n="svc_office_text">Een rustige, schone werkplek — flexibel gepland rond jullie openingstijden.</p>
+              <p class="muted" style="margin:0; font-weight:800; font-size:13px" data-i18n="svc_office_visit">
+                Bezoekfrequentie: 1×/wk • 2×/wk • 3×/wk+
+              </p>
+            </div>
+            <div class="cardFooter">
+              <a class="cardLink" href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cardImgWrap">
+              <img src="deep.jpg" alt="Deep cleaning" class="card__img" />
+              <div class="priceTag" data-i18n="price_deep">Vanaf €45/uur (min. 3 uur)</div>
+            </div>
+            <div class="cardBody">
+              <h3 data-i18n="svc_deep_title">Deep Cleaning</h3>
+              <p data-i18n="svc_deep_text">Intensief en grondig: vet, kalk, hoeken en opgebouwde vervuiling — zichtbaar verschil.</p>
+            </div>
+            <div class="cardFooter">
+              <a class="cardLink" href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cardImgWrap">
+              <img src="service-vve.jpg" alt="VvE schoonmaak" class="card__img" />
+              <div class="priceTag" data-i18n="price_vve">Vanaf €35/uur</div>
+            </div>
+            <div class="cardBody">
+              <h3 data-i18n="svc_vve_title">VvE (entree & trappenhuis)</h3>
+              <p data-i18n="svc_vve_text">Voor gezamenlijke ruimtes: entree, trappen, leuningen en vloeren — vaste rondes, duidelijke afspraken.</p>
+              <p class="muted" style="margin:0; font-weight:800; font-size:13px" data-i18n="svc_vve_freq">
+                Meestal: wekelijks of 2-wekelijks
+              </p>
+            </div>
+            <div class="cardFooter">
+              <a class="cardLink" href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cardImgWrap">
+              <img src="windows.jpg" alt="Glazenwasser" class="card__img" />
+              <div class="priceTag" data-i18n="price_windows">Vanaf €35/uur</div>
+            </div>
+            <div class="cardBody">
+              <h3 data-i18n="svc_windows_title">Glazenwasser</h3>
+              <p data-i18n="svc_windows_text">Streeploos resultaat voor ramen en kozijnen — binnen of buiten, afhankelijk van bereikbaarheid.</p>
+            </div>
+            <div class="cardFooter">
+              <a class="cardLink" href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cardImgWrap">
+              <img src="service-vacuum.jpg" alt="Oplevering / bouwschoonmaak" class="card__img" />
+              <div class="priceTag" data-i18n="price_build">Vanaf €45/uur</div>
+            </div>
+            <div class="cardBody">
+              <h3 data-i18n="svc_build_title">Oplevering / Bouwschoonmaak</h3>
+              <p data-i18n="svc_build_text">Na verbouwing of verhuizing: stof, bouwresten en detailwerk — klaar voor oplevering.</p>
+            </div>
+            <div class="cardFooter">
+              <a class="cardLink" href="#contact" data-i18n="svc_cta">Offerte aanvragen →</a>
+            </div>
+          </article>
+        </div>
+<div class="hintBar" aria-label="Pricing note">
+  <button class="btn small" type="button" data-modal-open="#pricingModal" data-i18n="btn_view_pricing">Bekijk prijsuitleg</button>
+  <span class="muted" data-i18n="pricing_hint">
+    Tarieven zijn richtprijzen. Definitieve prijs altijd via offerte op basis van locatie, grootte en wensen.
+  </span>
+</div>
+</div>
+</section>
+<!-- ABOUT -->
+    <section id="about" class="section section--alt">
+      <div class="container aboutGrid">
+        <div class="aboutBox">
+          <h2 style="margin:0 0 8px" data-i18n="about_title">Over Crestamila</h2>
+          <p class="muted" style="margin:0 0 10px; font-weight:650" data-i18n="about_p1">
+            Wij zijn een schoonmaakservice actief in Maastricht en heel Limburg. We staan voor kwaliteit, betrouwbaarheid en duidelijke afspraken.
+          </p>
+          <p class="muted" style="margin:0; font-weight:650" data-i18n="about_p2">
+            Of het nu gaat om een woning, kantoor of een VvE: we maken een plan dat past bij jouw ruimte en jouw ritme.
+          </p>
+
+          <div class="stats" aria-label="Company values">
+            <div class="stat">
+              <div class="n" data-i18n="stat_1_n">Eco</div>
+              <div class="t" data-i18n="stat_1_t">Bewuste middelen</div>
+            </div>
+            <div class="stat">
+              <div class="n" data-i18n="stat_2_n">Flex</div>
+              <div class="t" data-i18n="stat_2_t">Flexibel schema</div>
+            </div>
+            <div class="stat">
+              <div class="n" data-i18n="stat_3_n">Top</div>
+              <div class="t" data-i18n="stat_3_t">Net resultaat</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aboutMedia">
+          <!-- team.jpg لازم يظهر هنا -->
+          <img src="team.jpg" alt="Ons team" />
+          <div class="aboutNote" data-i18n="about_note">Professioneel • Betrouwbaar • Discreet</div>
+        </div>
+      </div>
+    </section>
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 data-i18n="gallery_title">Foto’s</h2>
+          <p data-i18n="gallery_subtitle">Een kleine indruk van ons werk en onze diensten.</p>
+        </div>
+
+        <div class="gallery">
+          <figure class="gItem"><img src="house.jpg" alt="Woning schoonmaak foto" /></figure>
+          <figure class="gItem"><img src="office.jpg" alt="Kantoor schoonmaak foto" /></figure>
+          <figure class="gItem"><img src="windows.jpg" alt="Glazenwasser foto" /></figure>
+          <figure class="gItem"><img src="service-vve.jpg" alt="VvE foto" /></figure>
+          <figure class="gItem"><img src="deep.jpg" alt="Deep cleaning foto" /></figure>
+          <figure class="gItem"><img src="team.jpg" alt="Team foto" /></figure>
+        </div>
+
+        <div class="gNote" data-i18n="gallery_note">
+          Deze foto’s geven een realistische indruk van ons werk. Elke locatie is anders en wordt met zorg behandeld.
+        </div>
+      </div>
+    </section>
+<!-- CONTACT -->
+<section id="contact" class="section section--alt">
+  <div class="container">
+    <div class="sectionHead">
+      <h2 data-i18n="contact_title">Contact</h2>
+      <p data-i18n="contact_sub">Werkgebied: Maastricht & Limburg</p>
+    </div>
+    
+    <div class="contactGrid">
+      <div class="contactBox">
+        <h3 style="margin:0 0 10px" data-i18n="contact_fast">Snel contact</h3>
+        <p class="muted" style="margin:0 0 10px; font-weight:700" data-i18n="contact_blurb">
+          Neem contact op voor een snelle prijsindicatie. We reageren meestal dezelfde dag.
+        </p>
+        
+        <div class="kv" style="margin-top:10px">
+          <span data-i18n="contact_region_k">Werkgebied:</span><b>Maastricht & Limburg</b>
+          <span>Email:</span><b><a href="mailto:crestamila.cleaning@gmail.com">crestamila.cleaning@gmail.com</a></b>
+          <span>WhatsApp:</span><b><a href="https://wa.me/31624545080" target="_blank" rel="noopener">+31 6 2454 5080</a></b>
+        </div>
+        
+        <div class="contactRow" style="margin-top:12px">
+          <a class="btn primary" href="https://wa.me/31624545080" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" href="mailto:crestamila.cleaning@gmail.com" data-i18n="btn_email">Email</a>
+          <button class="btn ghost" type="button" data-modal-open="#pricingModal" data-i18n="btn_quote">Offerte</button>
+        </div>
+      </div>
+      
+      <div class="contactBox">
+        <h3 style="margin:0 0 10px" data-i18n="form_title">Offerte aanvragen</h3>
+        
+        <!-- NOTE: هذا نموذج بسيط. إذا عندك FormSubmit، ضع action الخاص بك -->
+        <form class="form" action="#" method="post" onsubmit="return false;">
+          <label for="name" data-i18n="form_name">Naam</label>
+          <input class="input" id="name" name="name" placeholder="Naam" />
+          
+          <label for="phone" data-i18n="form_phone">Telefoon</label>
+          <input class="input" id="phone" name="phone" placeholder="+31..." />
+          
+          <label for="service" data-i18n="form_service">Service</label>
+          <select id="service" name="service">
+            <option value="woning" data-i18n="opt_home">Woning schoonmaak</option>
+            <option value="kantoor" data-i18n="opt_office">Kantoor schoonmaak</option>
+            <option value="deep" data-i18n="opt_deep">Deep Cleaning</option>
+            <option value="vve" data-i18n="opt_vve">VvE (entree & trappenhuis)</option>
+            <option value="windows" data-i18n="opt_windows">Glazenwasser</option>
+            <option value="build" data-i18n="opt_build">Oplevering / Bouwschoonmaak</option>
+          </select>
+          
+          <label for="msg" data-i18n="form_msg">Bericht</label>
+          <textarea id="msg" name="message" placeholder="Vertel ons wat je nodig hebt..."></textarea>
+          
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+            <button class="btn primary" type="button" id="sendWA" data-i18n="form_send">Versturen</button>
+            <button class="btn" type="button" data-modal-open="#pricingModal" data-i18n="btn_view_pricing">Bekijk prijsuitleg</button>
+          </div>
+          
+          <p class="fine" data-i18n="form_note">
+            Tip: stuur via WhatsApp ook je locatie + (indien mogelijk) een foto, dan kunnen we sneller een offerte maken.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footerRow">
+    <div>© <span id="year"></span> Crestamila Cleaning Service</div>
+    <div class="muted" style="font-weight:800">Maastricht & Limburg</div>
+  </div>
+</footer>
+</main>
+<!-- MODAL: PRICING / OFFERTE UITLEG -->
+  <div class="modal" id="pricingModal" aria-hidden="true" role="dialog" aria-label="Offerte / prijsuitleg">
+    <div class="modalCard">
+      <div class="modalHead">
+        <h3 data-i18n="modal_title">Offerte — transparant & realistisch</h3>
+        <button class="x" type="button" data-modal-close>✕</button>
+      </div>
+      <div class="modalBody">
+        <p data-i18n="modal_p1">
+          Onze tarieven zijn richtprijzen per uur. De definitieve prijs hangt af van:
+        </p>
+        <ul class="bul">
+          <li data-i18n="modal_l1">Grootte van de ruimte</li>
+          <li data-i18n="modal_l2">Staat van het pand (normaal / intensief / na verbouwing)</li>
+          <li data-i18n="modal_l3">Frequentie (wekelijks / 2-wekelijks / eenmalig)</li>
+          <li data-i18n="modal_l4">Bereikbaarheid & parkeer-/sleutelafspraken</li>
+          <li data-i18n="modal_l5">Extra wensen (ramen, apparatuur, detailwerk)</li>
+        </ul>
+        <p style="margin-top:12px" data-i18n="modal_p2">
+          Daarom bevestigen we altijd eerst een duidelijke offerte. Na akkoord plannen we de schoonmaak in.
+        </p>
+      </div>
+      <div class="modalActions">
+        <button class="btn" type="button" data-modal-close data-i18n="modal_close">Sluiten</button>
+        <a class="btn primary" href="#contact" data-modal-close data-i18n="modal_cta">Offerte aanvragen</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // ----- I18N (NL + EN) -----
+    const i18n = {
+      nl: {
+        brand_sub: "Maastricht & Limburg",
+        brand_tag: "Maastricht • Limburg • Eco-vriendelijk",
+
+        nav_services: "Diensten",
+        nav_about: "Over ons",
+        nav_gallery: "Foto’s",
+        nav_contact: "Contact",
+
+        btn_quote: "Offerte",
+        btn_email: "Email",
+        btn_view_pricing: "Bekijk prijsuitleg",
+
+        hero_title: "Professionele schoonmaak, met respect voor mens & natuur.",
+        hero_subtitle: "Voor woning, kantoor en VvE’s. Duidelijke afspraken, flexibel gepland en netjes opgeleverd.",
+        hero_cta_quote: "Vraag een offerte",
+        hero_cta_whatsapp: "WhatsApp ons",
+        hero_check_1: "Betrouwbaar & discreet",
+        hero_check_2: "Flexibele planning",
+        hero_check_3: "Eco-producten",
+
+        hero_fastcontact: "Snel contact",
+        hero_region_k: "Regio:",
+        hero_region_v: "Maastricht & Limburg",
+        hero_email_k: "Email:",
+        hero_resp_k: "Reactie:",
+        hero_resp_v: "Meestal dezelfde dag",
+        hero_note: "Prijzen zijn richtprijzen. Definitieve prijs altijd via offerte op basis van locatie, grootte en wensen.",
+
+        val1_t: "Milieubewust",
+        val1_d: "We gebruiken waar mogelijk eco-vriendelijke middelen.",
+        val2_t: "Op maat",
+        val2_d: "Wekelijks, tweewekelijks of eenmalig.",
+        val3_t: "Duidelijk",
+        val3_d: "Heldere afspraken en nette oplevering.",
+
+        services_title: "Diensten",
+        services_subtitle: "Voor particulieren, bedrijven en VvE’s in Maastricht en Limburg.",
+        svc_cta: "Offerte aanvragen →",
+        pricing_hint: "Tarieven zijn richtprijzen. Definitieve prijs altijd via offerte op basis van locatie, grootte en wensen.",
+
+        price_home: "Vanaf €25/uur",
+        price_office: "Vanaf €30/uur",
+        price_deep: "Vanaf €45/uur (min. 3 uur)",
+        price_vve: "Vanaf €35/uur",
+        price_windows: "Vanaf €35/uur",
+        price_build: "Vanaf €45/uur",
+svc_home_title: "Woning schoonmaak",
+  svc_home_text: "Fris en netjes, met vaste afspraken. Ideaal voor wekelijks, tweewekelijks of eenmalig.",
+  svc_office_title: "Kantoor schoonmaak",
+  svc_office_text: "Een rustige, schone werkplek — flexibel gepland rond jullie openingstijden.",
+  svc_office_visit: "Bezoekfrequentie: 1×/wk • 2×/wk • 3×/wk+",
+  svc_deep_title: "Deep Cleaning",
+  svc_deep_text: "Intensief en grondig: vet, kalk, hoeken en opgebouwde vervuiling — zichtbaar verschil.",
+  svc_vve_title: "VvE (entree & trappenhuis)",
+  svc_vve_text: "Voor gezamenlijke ruimtes: entree, trappen, leuningen en vloeren — vaste rondes, duidelijke afspraken.",
+  svc_vve_freq: "Meestal: wekelijks of 2-wekelijks",
+  svc_windows_title: "Glazenwasser",
+  svc_windows_text: "Streeploos resultaat voor ramen en kozijnen — binnen of buiten, afhankelijk van bereikbaarheid.",
+  svc_build_title: "Oplevering / Bouwschoonmaak",
+  svc_build_text: "Na verbouwing of verhuizing: stof, bouwresten en detailwerk — klaar voor oplevering.",
+  
+  about_title: "Over Crestamila",
+  about_p1: "Wij zijn een schoonmaakservice actief in Maastricht en heel Limburg. We staan voor kwaliteit, betrouwbaarheid en duidelijke afspraken.",
+  about_p2: "Of het nu gaat om een woning, kantoor of een VvE: we maken een plan dat past bij jouw ruimte en jouw ritme.",
+  stat_1_n: "Eco",
+  stat_1_t: "Bewuste middelen",
+  stat_2_n: "Flex",
+  stat_2_t: "Flexibel schema",
+  stat_3_n: "Top",
+  stat_3_t: "Net resultaat",
+  about_note: "Professioneel • Betrouwbaar • Discreet",
+  
+  gallery_title: "Foto’s",
+  gallery_subtitle: "Een kleine indruk van ons werk en onze diensten.",
+  gallery_note: "Deze foto’s geven een realistische indruk van ons werk. Elke locatie is anders en wordt met zorg behandeld.",
+  
+  contact_title: "Contact",
+  contact_sub: "Werkgebied: Maastricht & Limburg",
+  contact_fast: "Snel contact",
+  contact_blurb: "Neem contact op voor een snelle prijsindicatie. We reageren meestal dezelfde dag.",
+  contact_region_k: "Werkgebied:",
+  form_title: "Offerte aanvragen",
+  form_name: "Naam",
+  form_phone: "Telefoon",
+  form_service: "Service",
+  form_msg: "Bericht",
+  form_send: "Versturen",
+  form_note: "Tip: stuur via WhatsApp ook je locatie + (indien mogelijk) een foto, dan kunnen we sneller een offerte maken.",
+  
+  opt_home: "Woning schoonmaak",
+  opt_office: "Kantoor schoonmaak",
+  opt_deep: "Deep Cleaning",
+  opt_vve: "VvE (entree & trappenhuis)",
+  opt_windows: "Glazenwasser",
+  opt_build: "Oplevering / Bouwschoonmaak",
+  
+  modal_title: "Offerte — transparant & realistisch",
+  modal_p1: "Onze tarieven zijn richtprijzen per uur. De definitieve prijs hangt af van:",
+  modal_l1: "Grootte van de ruimte",
+  modal_l2: "Staat van het pand (normaal / intensief / na verbouwing)",
+  modal_l3: "Frequentie (wekelijks / 2-wekelijks / eenmalig)",
+  modal_l4: "Bereikbaarheid & parkeer-/sleutelafspraken",
+  modal_l5: "Extra wensen (ramen, apparatuur, detailwerk)",
+  modal_p2: "Daarom bevestigen we altijd eerst een duidelijke offerte. Na akkoord plannen we de schoonmaak in.",
+  modal_close: "Sluiten",
+  modal_cta: "Offerte aanvragen"
+},
+en: {
+        brand_sub: "Maastricht & Limburg",
+        brand_tag: "Maastricht • Limburg • Eco-friendly",
+
+        nav_services: "Services",
+        nav_about: "About",
+        nav_gallery: "Photos",
+        nav_contact: "Contact",
+
+        btn_quote: "Quote",
+        btn_email: "Email",
+        btn_view_pricing: "View pricing details",
+
+        hero_title: "Professional cleaning, with respect for people & nature.",
+        hero_subtitle: "For homes, offices and VvE buildings. Clear agreements, flexible planning and a neat finish.",
+        hero_cta_quote: "Request a quote",
+        hero_cta_whatsapp: "WhatsApp us",
+        hero_check_1: "Reliable & discreet",
+        hero_check_2: "Flexible scheduling",
+        hero_check_3: "Eco products",
+
+        hero_fastcontact: "Quick contact",
+        hero_region_k: "Region:",
+        hero_region_v: "Maastricht & Limburg",
+        hero_email_k: "Email:",
+        hero_resp_k: "Reply:",
+        hero_resp_v: "Usually same day",
+        hero_note: "Prices are guidelines. Final price is always confirmed via a quote based on location, size and requirements.",
+
+        val1_t: "Eco-minded",
+        val1_d: "We use eco-friendly products whenever possible.",
+        val2_t: "Tailored",
+        val2_d: "Weekly, bi-weekly or one-off.",
+        val3_t: "Clear",
+        val3_d: "Clear agreements and a neat handover.",
+
+        services_title: "Services",
+        services_subtitle: "For private clients, businesses and VvE’s in Maastricht and Limburg.",
+        svc_cta: "Request a quote →",
+        pricing_hint: "Rates are guidelines. Final price is confirmed via a quote based on location, size and requirements.",
+
+        price_home: "From €25/hour",
+        price_office: "From €30/hour",
+        price_deep: "From €45/hour (min. 3 hours)",
+        price_vve: "From €35/hour",
+        price_windows: "From €35/hour",
+        price_build: "From €45/hour",
+
+        svc_home_title: "Residential cleaning",
+        svc_home_text: "Fresh and tidy with clear agreements. Ideal for weekly, bi-weekly or one-off cleaning.",
+        svc_office_title: "Office cleaning",
+        svc_office_text: "A calm, clean workplace — scheduled flexibly around your opening hours.",
+        svc_office_visit: "Visit frequency: 1×/week • 2×/week • 3×/week+",
+        svc_deep_title: "Deep cleaning",
+        svc_deep_text: "Intensive and thorough: grease, limescale, corners and built-up dirt — visible difference.",
+        svc_vve_title: "VvE (entrance & stairwell)",
+        svc_vve_text: "For shared areas: entrance, stairs, handrails and floors — fixed rounds and clear agreements.",
+        svc_vve_freq: "Usually: weekly or bi-weekly",
+        svc_windows_title: "Window cleaning",
+        svc_windows_text: "Streak-free results for windows and frames — inside or outside, depending on accessibility.",
+        svc_build_title: "Handover / post-build cleaning",
+        svc_build_text: "After renovation or moving: dust, construction residue and detail work — ready for handover.",
+
+        about_title: "About Crestamila",
+        about_p1: "We are a cleaning service active in Maastricht and throughout Limburg. We stand for quality, reliability and clear agreements.",
+        about_p2: "Whether it’s a home, office or VvE: we create a plan that fits your space and your rhythm.",
+        stat_1_n: "Eco",
+        stat_1_t: "Conscious products",
+        stat_2_n: "Flex",
+        stat_2_t: "Flexible schedule",
+        stat_3_n: "Top",
+        stat_3_t: "Neat results",
+        about_note: "Professional • Reliable • Discreet",
+
+        gallery_title: "Photos",
+        gallery_subtitle: "A small impression of our work and services.",
+        gallery_note: "These photos show a realistic impression of our work. Every location is different and handled with care.",
+
+        contact_title: "Contact",
+        contact_sub: "Service area: Maastricht & Limburg",
+        contact_fast: "Quick contact",
+        contact_blurb: "Contact us for a fast price indication. We usually reply the same day.",
+        contact_region_k: "Service area:",
+        form_title: "Request a quote",
+        form_name: "Name",
+        form_phone: "Phone",
+        form_service: "Service",
+        form_msg: "Message",
+        form_send: "Send",
+        form_note: "Tip: on WhatsApp, also send your location + (if possible) a photo, so we can quote faster.",
+
+        opt_home: "Residential cleaning",
+        opt_office: "Office cleaning",
+        opt_deep: "Deep cleaning",
+        opt_vve: "VvE (entrance & stairwell)",
+        opt_windows: "Window cleaning",
+        opt_build: "Handover / post-build cleaning",
+
+        modal_title: "Quote — transparent & realistic",
+        modal_p1: "Our rates are hourly guidelines. The final price depends on:",
+        modal_l1: "Size of the space",
+        modal_l2: "Condition (standard / intensive / after renovation)",
+        modal_l3: "Frequency (weekly / bi-weekly / one-off)",
+        modal_l4: "Accessibility & parking/key arrangements",
+        modal_l5: "Extra requests (windows, appliances, detailing)",
+        modal_p2: "That’s why we always confirm a clear quote first. After approval, we schedule the cleaning.",
+        modal_close: "Close",
+        modal_cta: "Request a quote"
+      }
+    };
+    const $ = (s, el=document) => el.querySelector(s);
+    const $$ = (s, el=document) => Array.from(el.querySelectorAll(s));
+
+    function applyI18n(lang){
+      document.documentElement.lang = lang;
+      $$('.langBtn').forEach(b => b.classList.toggle('is-active', b.dataset.lang === lang));
+      $$('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = i18n[lang]?.[key];
+        if (val) el.textContent = val;
+      });
+
+      // Update select option text
+      $$('select option[data-i18n]').forEach(opt => {
+        const key = opt.getAttribute('data-i18n');
+        const val = i18n[lang]?.[key];
+        if (val) opt.textContent = val;
+      });
+    }
+
+    // Modal
+    function openModal(sel){
+      const m = $(sel);
+      if (!m) return;
+      m.classList.add('is-open');
+      m.setAttribute('aria-hidden', 'false');
+    }
+    function closeModal(modal){
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+
+    // WhatsApp from form
+    function buildWAMessage(){
+      const name = $('#name')?.value?.trim() || '';
+      const phone = $('#phone')?.value?.trim() || '';
+      const service = $('#service')?.value || '';
+      const msg = $('#msg')?.value?.trim() || '';
+      const serviceLabelMap = {
+        woning: { nl: 'Woning schoonmaak', en: 'Residential cleaning' },
+        kantoor:{ nl: 'Kantoor schoonmaak', en: 'Office cleaning' },
+        deep:  { nl: 'Deep Cleaning', en: 'Deep cleaning' },
+        vve:   { nl: 'VvE (entree & trappenhuis)', en: 'VvE (entrance & stairwell)' },
+        windows:{ nl: 'Glazenwasser', en: 'Window cleaning' },
+        build: { nl: 'Oplevering / Bouwschoonmaak', en: 'Handover / post-build cleaning' },
+      };
+      const lang = document.documentElement.lang || 'nl';
+      const serviceLabel = serviceLabelMap[service]?.[lang] || service;
+
+      const lines = [];
+      lines.push(`Offerte aanvraag / Quote request`);
+      if (name) lines.push(`Naam/Name: ${name}`);
+      if (phone) lines.push(`Telefoon/Phone: ${phone}`);
+      lines.push(`Service: ${serviceLabel}`);
+      if (msg) lines.push(`Bericht/Message: ${msg}`);
+      lines.push(`Regio/Region: Maastricht & Limburg`);
+
+      return encodeURIComponent(lines.join('\n'));
+    }
+
+    // Init
+    (function init(){
+      // year
+      $('#year').textContent = new Date().getFullYear();
+// language buttons
+$$('.langBtn').forEach(btn => {
+  btn.addEventListener('click', () => applyI18n(btn.dataset.lang));
+});
+applyI18n('nl');
+
+// smooth scroll
+$$('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const id = a.getAttribute('href');
+    if (!id || id === '#') return;
+    const target = $(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // close mobile nav if open
+    $('#mobileNav').style.display = 'none';
+  });
+});
+
+// mobile menu
+$('#menuBtn').addEventListener('click', () => {
+  const m = $('#mobileNav');
+  m.style.display = (m.style.display === 'block') ? 'none' : 'block';
+});
+
+// modal open/close
+$$('[data-modal-open]').forEach(btn => {
+  btn.addEventListener('click', () => openModal(btn.getAttribute('data-modal-open')));
+});
+$$('[data-modal-close]').forEach(btn => {
+  btn.addEventListener('click', () => closeModal(btn.closest('.modal')));
+});
+$$('.modal').forEach(m => {
+  m.addEventListener('click', (e) => { if (e.target === m) closeModal(m); });
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') $$('.modal.is-open').forEach(closeModal);
+});
+
+// WhatsApp send button
+$('#sendWA').addEventListener('click', () => {
+const text = buildWAMessage();
+const url = `https://wa.me/31624545080?text=${text}`;
+window.open(url, '_blank', 'noopener');
+});
+
+// Fix: ensure mailto works
+// (يشتغل طبيعي إذا الرابط يبدأ بـ mailto:)
+// already correct in HTML above.
+})();
+</script> <
+/body> <
+/html>
