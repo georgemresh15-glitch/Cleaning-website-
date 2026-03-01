@@ -588,3 +588,7 @@ form .field input, form .field textarea, form select{
 .wa-icon {
   font-size: 20px;
 }
+.wa-text {
+  font-size: 15px;
+  white-space: nowrap;
+}
