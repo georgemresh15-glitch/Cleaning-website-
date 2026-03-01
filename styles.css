@@ -539,3 +539,28 @@ form .field input, form .field textarea, form select{
 @media (max-width: 520px){
   .card__img{ height: 150px; }
 }
+.site-footer {
+  margin-top: 60px;
+  padding: 40px 20px;
+  background: #f7f9fb;
+  border-top: 1px solid #e6eaf0;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  opacity: 0.95;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #555;
+}
