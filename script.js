@@ -33,9 +33,8 @@ const i18n = {
     nav_gallery: "Foto’s",
     nav_contact: "Contact",
     btn_prices: "Tarieven",
-
     hero_pill: "Maastricht • Limburg • Eco-vriendelijk",
-    hero_title: "Professionele schoonmaak, met respect voor mens & natuur.",
+    hero_title: "Professionele schoonmaak voor woning, kantoor en VvE’s."
     hero_subtitle: "Voor woning, kantoor en VvE’s. Duidelijke afspraken, flexibel gepland en netjes opgeleverd.",
     hero_cta_quote: "Vraag een offerte",
     hero_cta_whatsapp: "WhatsApp ons",
