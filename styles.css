@@ -703,3 +703,16 @@ transition:all .3s ease;
 transform:translateY(-6px);
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
   }
+.val{
+background:#ffffff;
+padding:22px;
+border-radius:16px;
+border:1px solid #e6edf2;
+box-shadow:0 8px 22px rgba(0,0,0,0.05);
+transition:all .25s ease;
+}
+
+.val:hover{
+transform:translateY(-5px);
+box-shadow:0 14px 30px rgba(0,0,0,0.08);
+  }
