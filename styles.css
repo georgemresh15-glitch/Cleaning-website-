@@ -647,7 +647,7 @@ form .field input, form .field textarea, form select{
 .hero .btn{
   padding:12px 18px;
   border-radius:14px;
-  font-weight:700;
+  font-weight:700;u
 }
 .val{
   background:#ffffff;
@@ -670,4 +670,16 @@ form .field input, form .field textarea, form select{
 .val p{
   font-size:14px;
   color:#6b7280;
+}
+.val{
+background:#ffffff;
+border-radius:18px;
+padding:22px;
+box-shadow:0 12px 28px rgba(0,0,0,0.08);
+transition:all .25s ease;
+}
+
+.val:hover{
+transform:translateY(-6px);
+box-shadow:0 18px 40px rgba(0,0,0,0.12);
 }
