@@ -1,4 +1,4 @@
-:root{
+u:root{
   /* Lighter dark theme (clean + readable) */
   --bg:#0f172a;
   --bg2:#111c33;
@@ -780,3 +780,18 @@ box-shadow:0 14px 30px rgba(0,0,0,0.08);
   font-size:14px;
   white-space:nowrap;
 }
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container,
+.section,
+.contactGrid,
+.cards {
+  max-width: 100%;
+  }
